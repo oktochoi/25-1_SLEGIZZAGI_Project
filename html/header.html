@@ -1,1 +1,98 @@
-<!-- 헤더 파일 한 곳에서 만들고 나머지 분들은 복붙 해가시면 될 것 같아요 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            color: #2c2c2c;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .logo-img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .nav {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #666;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-text">SLE</span>
+                <img src="logo.png" alt="SLE Cube Logo" class="logo-img">
+            </a>
+            <nav class="nav">
+                <a href="#">About</a>
+                <a href="#">Archive</a>
+                <a href="#">Recruiting</a>
+                <a href="#">Q&A</a>
+            </nav>
+        </div>
+    </header>
+</body>
+</html><!-- 헤더 파일 한 곳에서 만들고 나머지 분들은 복붙 해가시면 될 것 같아요 -->
