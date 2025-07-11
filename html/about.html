@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>소개 페이지</title>
+  <link rel="stylesheet" href="../css/about.css" />
+</head>
+<body>
+<body>
+  <!-- Hero 섹션 (첫 화면) -->
+  <section class="hero">
+    <img src="../img/logo.svg" alt="SLE 로고" class="logo-image" />
+    <div class="overlay"></div>
+
+    <div class="overlay-text">
+      <span class="word"><strong>S</strong>olve</span>
+      <span class="word"><strong>L</strong>earn</span>
+      <span class="word"><strong>E</strong>volve</span>
+    </div>
+    <p class="subtitle">이 시대의 슬기로운 코더를 양성하는 동아리</p>
+  </section>
+
+  <!-- 활동 섹션 (스크롤하면 가로 슬라이드) -->
+  <section class="slide-container">
+    <div class="scroll-wrapper">
+      <div class="slider-track" id="sliderTrack">
+        <div class="card"><img src="../img/meeting.svg" /><h3>정모</h3><p>매주 화요일 19:00 ~ 20:30 전체 동아리원이 모여 친목 시간을 갖습니다. 슬기짜기의 흐름을 함께 맞추고, 서로의 열정을 확인하는 소중한 시간입니다.</p></div>
+        <div class="card"><img src="../img/study.svg" /><h3>스터디</h3><p>슬기짜기에서는 학년별 필수 스터디, 직군별 필수 스터디를 진행합니다. 그리고 개인이 주도하는 개별 자율 스터디가 운영됩니다.</p></div>
+        <div class="card"><img src="../img/outing.svg" /><h3>아웃팅</h3><p>동아리원들이 함께 학교 밖으로 나가 즐기는 친목 활동입니다. 게임, 식사, 피크닉 등 다양한 방식으로 서로 더 가까워지고 활동에 활기를 불어넣는 시간이에요!</p></div>
+        <div class="card"><img src="../img/project.svg" /><h3>방학 프로젝트</h3><p>3주간 몰입하는, 내가 주도하는 진짜 프로젝트 계절학기 기간동안, 원하는 사람들과 원하는 주제로 팀을 구성해 자유롭게 프로젝트를 진행합니다.</p></div>
+        <div class="card"><img src="../img/endparty.svg" /><h3>슬년회</h3><p>방학 프로젝트의 마지막 주,완성된 프로젝트를 발표하고, 슬기짜기 OB 선배님들과 만나 피드백을 받고 경험을 나누는 소중한 자리예요.</p></div>
+      </div>
+    </div>
+  </section>
+
+    <section class="gallery-section">
+    <h2 class="gallery-title">갤러리</h2>
+
+    <div class="gallery-grid">
+        <div class="gallery-card"><div class="placeholder"></div><p>슬기짜기 첫 정모</p></div>
+        <div class="gallery-card"><div class="placeholder"></div><p>슬기짜기 첫 정모</p></div>
+        <div class="gallery-card"><div class="placeholder"></div><p>슬기짜기 첫 정모</p></div>
+        <div class="gallery-card"><div class="placeholder"></div><p>슬기짜기 첫 정모</p></div>
+        <div class="gallery-card"><div class="placeholder"></div><p>슬기짜기 첫 정모</p></div>
+        <div class="gallery-card"><div class="placeholder"></div><p>슬기짜기 첫 정모</p></div>
+        <div class="gallery-card"><div class="placeholder"></div><p>슬기짜기 첫 정모</p></div>
+        <div class="gallery-card"><div class="placeholder"></div><p>슬기짜기 첫 정모</p></div>
+    </div>
+
+    <!-- 페이지네이션 -->
+    <div class="pagination">
+        <button>&#9664;</button>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <button>&#9654;</button>
+    </div>
+    </section>
+
+<script>
+  const track = document.getElementById('sliderTrack');
+  const slideSection = document.querySelector('.slide-container');
+
+  window.addEventListener('scroll', () => {
+    const sectionTop = slideSection.offsetTop;
+    const sectionHeight = slideSection.offsetHeight;
+    const scrollY = window.scrollY;
+
+    const scrollInSection = scrollY - sectionTop;
+    const visibleHeight = sectionHeight - window.innerHeight;
+
+    const startRatio = 0.3333;
+    const endRatio = 0.6666;
+
+    const startScroll = sectionTop + visibleHeight * startRatio;
+    const endScroll = sectionTop + visibleHeight * endRatio;
+
+    const maxTranslateX = track.scrollWidth - window.innerWidth;
+
+    if (scrollY < startScroll) {
+      // 시작 전: 트랙은 0 위치
+      track.style.transform = `translateX(0px)`;
+    } else if (scrollY >= endScroll) {
+      // 종료 후: 트랙은 최종 위치
+      track.style.transform = `translateX(-${maxTranslateX}px)`;
+    } else {
+      // 구간 내: 슬라이드 트랙 이동
+      const percent = (scrollY - startScroll) / (endScroll - startScroll);
+      track.style.transform = `translateX(-${percent * maxTranslateX}px)`;
+    }
+  });
+
+  window.addEventListener('load', () => {
+    const trackWidth = track.scrollWidth;
+    document.querySelector('.slide-container').style.height = trackWidth + 'px';
+  });
+</script>
+
+</body>
+</html>
