@@ -1,0 +1,77 @@
+.project-header {
+    padding-top: 200px;
+    padding-bottom: 75px;
+    text-align: center;
+
+}
+
+.title-slegizzagi {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+
+}
+
+.category-menu {
+    padding: 20px;
+    text-align: center;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list button {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    width: 200px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.category-list button.active,
+.category-list button:focus {
+    background-color: #3cb03d;
+    color: #fff;
+}
+
+.project-card.hidden {
+    display: none;
+}
+
+.view-more-container {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 0 0;
+}
+
+.view-more {
+    background: none;
+    color: #000;
+    border: none;
+    margin-bottom: 50px;
+    border-radius: 0;
+    padding: 0;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: none;
+    text-decoration: none;
+    transition: color 0.1s;
+}
+
+.view-more:hover {
+    text-decoration: none;
+    color: #ffffff;
+}

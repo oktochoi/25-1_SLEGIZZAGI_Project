@@ -1,0 +1,64 @@
+.project-card {
+    grid-template-columns: repeat(4, 1fr);
+    background: #72BF6B;
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    height: 360px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+
+
+.project-image {
+    background-color: #d9d9d9;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.project-meta {
+    margin-top: 2px;
+    font-size: 12px;
+    justify-content: space-between;
+}
+
+.project-info {
+    margin-top: 5px;
+    margin-left: 10px;
+
+}
+
+.project-tags {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.project-card-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+}
+
+.image-text {
+    font-size: 40px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: bold;
+    text-align: center;
+}
+
+.icon-like,
+.icon-message,
+.icon-share {
+    margin-right: 2px;
+}
