@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A</title>
+    <link rel="stylesheet" href="../css/qna.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+        }
+
+        .header {
+            background-color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            color: #2c2c2c;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .logo-img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .nav {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #666;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-text">SLE</span>
+                <img src="logo.png" alt="SLE Cube Logo" class="logo-img">
+            </a>
+            <nav class="nav">
+                <a href="#">About</a>
+                <a href="#">Archive</a>
+                <a href="#">Recruiting</a>
+                <a href="#">Q&A</a>
+            </nav>
+        </div>
+    </header>
+    <div class="main-container">
+        <div class="qna-title">
+            <h1 class="qna-title-text">Q&A</h1>
+            <div class="qna-list">
+                <h2 class="qna-list-text-title">Get your answers here!</h2>
+            </div>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-question">Q. 슬기짜기 프로젝트란 무엇인가요?</div>
+            <div class="faq-answer">A. 슬기짜기 프로젝트는 참여자들이 일상 속 문제를 스스로 발견하고 창의적으로 해결해 나가는 과정을 담은 프로젝트입니다.</div>
+            <hr class="faq-divider">
+            <div class="faq-question">Q. 참가 신청은 어떻게 하나요?</div>
+            <div class="faq-answer">A. 참가 신청은 홈페이지의 모집 공고를 참고하여 온라인으로 지원하실 수 있습니다.</div>
+            <hr class="faq-divider">
+            <div class="faq-question">Q. 프로젝트 결과물은 어디서 볼 수 있나요?</div>
+            <div class="faq-answer">A. 프로젝트 결과물은 프로젝트 페이지에서 확인하실 수 있습니다.</div>
+        </div>
+        <div class="qna-extra-info" style="text-align:center; margin: 300px 0 40px 0;">
+            <h2 style="font-size:2.5rem; font-weight:900; margin-bottom:32px;">Q&amp;A로 해결되지 않으셨다면?</h2>
+            <div style="font-size:1.2rem; margin-bottom:10px;">기타 문의 사항 / 자세한 정보 등이 필요한 분을 위해 !</div>
+            <div style="font-size:1.2rem; margin-bottom:10px; font-weight:600;">슬기짜기가 직접 보고 바로 답변드려요.</div>
+            <div style="font-size:1.2rem; margin-bottom:30px;">아래 노션 링크에 편하게 남겨주세요.</div>
+            <a href="https://www.notion.so/your-notion-link" target="_blank"
+                style="display:inline-block; background:#ddd; color:#222; font-weight:700; padding:18px 40px; border-radius:8px; font-size:1.2rem; text-decoration:none; margin-bottom:10px;">F&amp;Q<br><span
+                    style="font-weight:400; font-size:1rem;">Notion link로 이동 →</span></a>
+        </div>
+    </div>
+    <script src="../scripts/qna.js"></script>
+</body>
+
+</html>

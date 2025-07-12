@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLE</title>
+    <link rel="stylesheet" href="../css/project-imgbox.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            color: #2c2c2c;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .logo-img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .nav {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-text">SLE</span>
+                <img src="logo.png" alt="SLE Cube Logo" class="logo-img">
+            </a>
+            <nav class="nav">
+                <a href="#">About</a>
+                <a href="#">Archive</a>
+                <a href="#">Recruiting</a>
+                <a href="#">Q&A</a>
+            </nav>
+        </div>
+    </header>
+    <div class="main-container">
+        <div class="project-detail-container">
+            <h1 class="project-detail-title1">#Web</h1>
+            <h1 class="project-detail-title2">#2025</h1>
+        </div>
+
+        <h1 class="project-detail-title">프로젝트 이름</h1>
+
+        <div class="project-detail-teams">
+            <h2 class="project-detail-teams-title">팀원 : <span class="project-detail-members"></span></h2>
+            <h2 class="project-detail-teams-title">기술 스택 : <span class="project-detail-stack"></span></h2>
+            <h2 class="project-detail-teams-title">프로젝트 설명 : <span class="project-detail-desc-long"></span></h2>
+        </div>
+        <div class="project-detail-image detail-desc-image">
+            <img src="" alt="프로젝트 상세 이미지" class="detail-desc-img">
+        </div>
+
+        <div class="project-detail-view-more-container">
+            <button class="project-detail-view-more-text">View More</button>
+            <button class="project-detail-view-more-home">프로젝트 홈으로 →</button>
+        </div>
+
+        <div class="project-detail-card-container">
+            <div class="project-card" data-id="1" data-category="WEB">
+                <div class="project-image">
+                    <img src="../img/project/2022-web1.jpeg" alt="사진" class="image-text">
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <p class="project-meta-title">2022 웹 프로젝트</p>
+                    </div>
+                    <div class="project-tags">
+                        #Web #2022
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-id="2" data-category="APP">
+                <div class="project-image">
+                    <img src="../img/project/2021-app1.jpeg" alt="사진" class="image-text">
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <p class="project-meta-title">2021 앱 프로젝트</p>
+                    </div>
+                    <div class="project-tags">
+                        #App #2021
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-id="3" data-category="DATA">
+                <div class="project-image">
+                    <img src="../img/project/2021-data1.jpeg" alt="사진" class="image-text">
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <p class="project-meta-title">2021 데이터 프로젝트</p>
+                    </div>
+                    <div class="project-tags">
+                        #Data #2021
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="../scripts/project.js"></script>
+        <script src="../scripts/project-detail.js"></script>
+</body>
+
+</html>

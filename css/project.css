@@ -1,16 +1,25 @@
 .project-header {
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 75px;
     text-align: center;
 
 }
 
+.project-main {
+    background-color: #ffffff;
+}
+
 .title-slegizzagi {
-    font-size: 30px;
+    font-size: 48px;
     font-weight: bold;
     color: #333;
-    margin: 0;
+    margin-bottom: 20px;
+}
 
+.subtitle-slegizzagi {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .category-menu {
@@ -25,19 +34,20 @@
     gap: 32px;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-bottom: 50px;
 }
 
 .category-list button {
     background-color: transparent;
     color: #333;
     border: none;
-    padding: 10px 20px;
+    padding: 20px 40px;
     border-radius: 15px;
     width: 200px;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
+    border-radius: 100px;
 }
 
 .category-list button.active,
@@ -54,6 +64,7 @@
     display: flex;
     justify-content: center;
     margin: 32px 0 0 0;
+    padding: 25px 0;
 }
 
 .view-more {
@@ -74,4 +85,84 @@
 .view-more:hover {
     text-decoration: none;
     color: #ffffff;
+}
+
+/* 카드 레이아웃 및 이미지 스타일 */
+.project-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .project-card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .project-card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: 20px 20px;
+    margin-bottom: 50px;
+}
+
+/* 카드 이미지가 카드 영역을 벗어나지 않고 항상 축소만 되도록 */
+.card-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    background: #f5f5f5;
+}
+
+.project-image {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.project-info {
+    padding: 20px 18px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.project-meta-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.project-meta-batch {
+    background: #f5f5f5;
+    border-radius: 16px;
+    padding: 2px 12px;
+    font-size: 15px;
+    color: #333;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.project-tags {
+    color: #888;
+    font-size: 14px;
 }

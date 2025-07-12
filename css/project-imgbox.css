@@ -1,53 +1,95 @@
-.project-card {
-    grid-template-columns: repeat(4, 1fr);
-    background: #72BF6B;
-    display: inline-block;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 300px;
-    height: 360px;
-    border-radius: 10px;
-    margin-left: 20px;
+/* 카드 레이아웃 및 이미지 스타일 */
+.project-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
 }
 
+@media (max-width: 900px) {
+    .project-card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
+@media (max-width: 600px) {
+    .project-card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: 0;
+}
 
 .project-image {
-    background-color: #d9d9d9;
-    width: 300px;
-    height: 300px;
+    border-radius: 24px 24px 0 0;
+    width: 100%;
+    height: 200px;
     display: flex;
     justify-content: center;
+    /* 가로 중앙 정렬 */
     align-items: center;
-    border-radius: 10px 10px 0 0;
+    /* 세로 중앙 정렬 */
+    background: #f5f5f5;
 }
 
-.project-meta {
-    margin-top: 2px;
-    font-size: 12px;
-    justify-content: space-between;
+.project-image img {
+    max-width: 100%;
+    /* 이미지가 넘치지 않도록 */
+    max-height: 100%;
+    object-fit: contain;
+    /* 비율 유지하면서 꽉 채우기 */
+}
+
+/* 카드 이미지가 카드 영역을 벗어나지 않고 항상 축소만 되도록 */
+.card-img {
+    width: 100%;
+    height: 180px;
+    max-width: 100%;
+    /* 이미지가 넘치지 않도록 */
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+    background: #f5f5f5;
 }
 
 .project-info {
-    margin-top: 5px;
-    margin-left: 10px;
+    padding: 20px 18px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #72BF6B;
+}
 
+.project-meta-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+.project-meta-batch {
+    background: #f5f5f5;
+    border-radius: 16px;
+    padding: 2px 12px;
+    font-size: 15px;
+    color: #333;
+    display: inline-block;
+    margin-bottom: 6px;
 }
 
 .project-tags {
-    color: rgba(0, 0, 0, 0.4);
-    font-size: 12px;
-    margin-top: 5px;
-}
-
-.project-card-container {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 100px;
-    justify-content: center;
+    color: #fff;
+    font-size: 14px;
 }
 
 .image-text {
