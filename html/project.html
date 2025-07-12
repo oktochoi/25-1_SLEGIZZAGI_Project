@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬기짜기 프로젝트</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../css/project-imgbox.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            color: #2c2c2c;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .logo-img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .nav {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #666;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-text">SLE</span>
+                <img src="logo.png" alt="SLE Cube Logo" class="logo-img">
+            </a>
+            <nav class="nav">
+                <a href="#">About</a>
+                <a href="#">Archive</a>
+                <a href="#">Recruiting</a>
+                <a href="#">Q&A</a>
+            </nav>
+        </div>
+    </header>
+    <main class="project-main">
+        <div class="project-header">
+            <h1 id="title" class="title-slegizzagi">"슬기짜기 프로젝트"</h1>
+            <p class="subtitle-slegizzagi">참여자들이 일상 속 문제를 스스로 발견하고 창의적으로 해결해 나가는 과정을 담은 프로젝트입니다.</p>
+        </div>
+        <nav class="category-menu">
+            <ul class="category-list">
+                <li><button class="active" id="category-item1">ALL</button></li>
+                <li><button id="category-item2">WEB</button></li>
+                <li><button id="category-item3">APP</button></li>
+                <li><button id="category-item4">DATA</button></li>
+                <li><button id="category-item5">GAME</button></li>
+            </ul>
+        </nav>
+
+        <div class="project-card-container">
+            <div class="project-card" data-id="1" data-category="WEB">
+                <div class="project-image">
+                    <img src="../img/project/2022-web1.jpeg" alt="사진" class="image-text">
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <p class="project-meta-title">2022 웹 프로젝트</p>
+                    </div>
+                    <div class="project-tags">
+                        #Web #2022
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-id="2" data-category="APP">
+                <div class="project-image">
+                    <img src="../img/project/2021-app1.jpeg" alt="사진" class="image-text">
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <p class="project-meta-title">2021 앱 프로젝트</p>
+                    </div>
+                    <div class="project-tags">
+                        #App #2021
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-id="3" data-category="DATA">
+                <div class="project-image">
+                    <img src="../img/project/2021-data1.jpeg" alt="사진" class="image-text">
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <p class="project-meta-title">2021 데이터 프로젝트</p>
+                    </div>
+                    <div class="project-tags">
+                        #Data #2021
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-id="4" data-category="GAME">
+                <div class="project-image">
+                    <img src="../img/project/2021-game1.jpeg" alt="사진" class="image-text">
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <p class="project-meta-title">2021 게임 프로젝트</p>
+                    </div>
+                    <div class="project-tags">
+                        #Game #2021
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-id="5" data-category="WEB">
+                <div class="project-image">
+                    <img src="../img/project/2023-web1.jpeg" alt="사진" class="image-text">
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <p class="project-meta-title">2023 웹 프로젝트</p>
+                    </div>
+                    <div class="project-tags">
+                        #Web #2023
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-id="6" data-category="APP">
+                <div class="project-image">
+                    <img src="../img/project/2022-app1.jpeg" alt="사진" class="image-text">
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <p class="project-meta-title">2022 앱 프로젝트</p>
+                    </div>
+                    <div class="project-tags">
+                        #App #2022
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card hidden" data-id="7" data-category="APP">
+                <div class="project-image">
+                    <img src="../img/project/2023-app2.jpeg" alt="사진" class="image-text">
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <p class="project-meta-title">2023 앱 프로젝트</p>
+                    </div>
+                    <div class="project-tags">
+                        #App #2023
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="project-card hidden" data-id="8" data-category="DATA">
+                <div class="project-image">
+                    <img src="../img/project/2023-data1.jpeg" alt="사진" class="image-text">
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <p class="project-meta-title">2023 데이터 프로젝트</p>
+                    </div>
+                    <div class="project-tags">
+                        #Data #2023
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="project-card hidden" data-id="9" data-category="WEB">
+                <div class="project-image">
+                    <img src="../img/project/2023-web2.jpeg" alt="사진" class="image-text">
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <p class="project-meta-title">2023 웹 프로젝트</p>
+                    </div>
+                    <div class="project-tags">
+                        #Web #2023
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="view-more-container">
+            <button class="view-more">View More</button>
+        </div>
+    </main>
+    <script type="module" src="../scripts/project.js"></script>
+</body>
+
+</html>

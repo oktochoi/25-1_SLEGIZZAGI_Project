@@ -1,0 +1,92 @@
+body {
+    min-height: 150vh;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.main-container {
+    background-color: #fff;
+}
+
+.qna-title {
+    text-align: center;
+    margin-top: 120px;
+    background-color: #fff;
+}
+
+.qna-title-text {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.qna-list-text-title {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 100;
+    color: #000;
+}
+
+/* FAQ 아코디언 스타일 */
+.faq-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    border: 1.5px solid #222;
+}
+
+.faq-question {
+    padding: 40px 0;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    background: #fff;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.faq-answer {
+    padding: 20px 0;
+    font-size: 18px;
+    color: #333;
+    display: none;
+    background: #fff;
+    text-align: center;
+}
+
+.faq-question.active+.faq-answer {
+    display: block;
+}
+
+.faq-divider {
+    border: none;
+    border-bottom: 1.5px solid #222;
+    margin: 0;
+    width: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.qna-extra-info {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.qna-extra-info-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 32px;
+}
+
+.qna-extra-info-text {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
