@@ -1,0 +1,762 @@
+/* JNEYuna => '슬기짜기' 작성할 폰트 */
+@font-face {
+  font-family: 'JNEYuna';
+  src: url('../fonts/JNEYuna-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* kopubdotum light => 일반 한국어 텍스트 */
+@font-face {
+  font-family: 'KoPubDotum';
+  src: url('../fonts/KoPubDotum-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Inter Black => 강조용 한글 텍스트 */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter_18pt-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Abril Fatface => 'SLE' 같은 영어 강조 제목 */
+@font-face {
+  font-family: 'Abril Fatface';
+  src: url('../fonts/AbrilFatface-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Noto Sans KR => 일반 영문 텍스트 */
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../fonts/NotoSansKR-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Bellefair => 영어 텍스트 강조 */
+@font-face {
+  font-family: 'Bellefair';
+  src: url('../fonts/Bellefair-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 기본 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 전체 페이지 컨테이너 */
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #FFF;
+}
+
+/* 각 페이지 섹션 공통 스타일 */
+.page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* -------------- 첫 번째 페이지 --------------- */
+
+#page1 {
+  position: sticky; 
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255,255,255,0.85);
+  z-index: 10;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 80px;
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  will-change: opacity, transform;
+}
+
+/* 텍스트 전용 스타일 */
+.text-wrapper {
+  font-family: 'Abril Fatface', serif;
+  font-size: 128px;
+  line-height: 140px;
+  font-weight: 400;
+  color: #000;
+}
+
+/* -------------- 두 번째 페이지 --------------- */
+#page2 {
+  flex-direction: column;
+  background: #f9f9f9;
+}
+
+/* 전체 감싸는 컨테이너 */
+.sle-container {
+  text-align: center;
+}
+
+/* 2페이지 - 슬기짜기 텍스트 => 글씨체 적용안됨!!! */
+.logo {
+  font-family: 'JNEYuna', sans-serif;
+  font-size: 200px;
+  color: #000;
+  -webkit-text-stroke: 1px #000;
+  text-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15),
+              0px 4px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+}
+
+/* S L E 키워드 강조 */
+.sle-keyword {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-bottom: 80px;
+}
+
+/* SLE에 해당하는 큰 글자*/
+.big-letter {
+  font-family: 'Abril Fatface', serif;
+  font-size: 80px;
+  color: #000;
+}
+
+/*olve , earn, volve에 해당하는 작은 글자*/
+.small-letter {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 40px;
+  color: #444;
+  letter-spacing: 1px;
+}
+
+/* ✅ 설명문 */
+.sle-desc {
+  font-family: 'KoPubDotum', sans-serif;
+  font-size: 30px;
+  color: #444;
+  line-height: 32px;
+}
+
+/* -------------- 두 번째 페이지 --------------- */
+#page3 {
+  flex-direction: column;
+}
+
+.sle3-container {
+  text-align: center;
+}
+
+.sle3-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.sle3-image{
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ✅ 하단 설명 텍스트 */
+.sle3-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: #000;
+  line-height: 50px;
+  text-align: center;
+}
+
+/* --------------- Section 4: 스터디 ---------------- */
+/* 📍텍스트 박스 구조 */
+#page4 {
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;   /* 위 아래 정렬로 변경 */
+  align-items: center;
+  padding: 120px 20px 60px;
+}
+
+/* 설명 박스 */
+#page4 .info-container {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#page4 .info-block {
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.tech-logo-wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 40px;
+  padding: 20px 0;
+  background: #f9f9f9;
+  position: relative;
+}
+
+.tech-logo-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll-track 30s linear infinite;
+}
+
+.tech-logo-set {
+  display: flex;
+  gap: 60px; /* 이미지 간격 넓게 */
+  padding: 0 20px;
+}
+
+.tech-logo-set img {
+  height: 60px;  /* 높이 조정 */
+  object-fit: contain;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.tech-logo-set img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+@keyframes scroll-track {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.33%); /* 3세트 기준으로 비율 조정 */
+  }
+}
+
+/* 🔷 슬년회 전체 영역 */
+#page5 {
+  background: #fff;                        /* 배경은 흰색 */
+  display: flex;                           /* flexbox로 내부 요소 배치 */
+  justify-content: center;                /* 가로 중앙 정렬 */
+  align-items: center;                    /* 세로 중앙 정렬 */
+  padding: 80px 20px;                     /* 상하/좌우 여백 */
+}
+
+/* 🔷 슬년회 콘텐츠 전체 래퍼 */
+#page5 .info-container {
+  max-width: 800px;                       /* 너무 넓지 않게 제한 */
+  width: 100%;                            /* 반응형 너비 설정 */
+}
+
+/* 🔷 슬년회 텍스트 박스 */
+#page5 .info-block {
+  background: #f5f5f5;                    /* 연회색 배경 */
+  padding: 40px;                          /* 안쪽 여백 */
+  border-radius: 12px;                    /* 모서리 둥글게 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);  /* 가벼운 그림자 */
+  text-align: center;                     /* 텍스트 중간 정렬 */
+}
+
+/* 🔷 슬년회 제목 */
+#page5 .info-block h2 {
+  font-family: 'Noto Sans KR', sans-serif;  /* 제목 글꼴 */
+  font-size: 2rem;                          /* 크기 크게 */
+  font-weight: bold;                        /* 굵게 */
+  margin-bottom: 16px;                      /* 아래 여백 */
+  display: flex;                            /* 아이콘과 나란히 배치 */
+  align-items: center;                      /* 아이콘과 수직 정렬 */
+  justify-content: center;                  /* 아이콘 포함해 전체 중앙 정렬 */
+}
+
+/* 🔷 슬년회 본문 설명 텍스트 */
+#page5 .info-block p {
+  font-family: 'KoPubDotum', sans-serif;   /* 본문 글꼴 */
+  font-size: 1.1rem;                        /* 글자 크기 */
+  line-height: 1.8;                         /* 줄 간격 */
+  color: #222;                              /* 글자색 */
+  margin-bottom: 24px;                     /* 아래 여백 */
+}
+
+/* --------------- Section 6: 프로젝트 ---------------- */
+#page6 {
+  background:#f9f9f9;                       /* 배경색 흰색 */
+  display: flex;                          /* flex로 배치 */
+  flex-direction: column;                /* 위아래 정렬 */
+  align-items: center;                   /* 가운데 정렬 */
+  padding: 120px 20px 60px;              /* 상단 넉넉하게 여백 */
+}
+
+#page6 .info-container {
+  max-width: 1000px;                     /* 최대 너비 제한 */
+  width: 100%;                           /* 반응형 */
+  display: flex;                         /* 내부 정렬을 위해 flex 사용 */
+  justify-content: center;              /* 가로 가운데 정렬 */
+}
+
+#page6 .info-block {
+  background: #ffffff;                  /* 박스 배경 흰색 */
+  padding: 60px;                        /* 내부 여백 */
+  border-radius: 16px;                  /* 둥근 모서리 */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); /* 부드러운 그림자 */
+  text-align: center;                   /* 텍스트 전체 중앙 정렬 */
+}
+
+/* 제목 h1 + 아이콘 스타일 */
+#page6 .info-block h1 {
+  font-family: 'Noto Sans KR', sans-serif;  /* 깔끔한 글꼴 */
+  font-size: 2.2rem;                         /* 크고 굵게 */
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;               
+  align-items: center;
+  gap: 8px;
+}
+
+/* 본문 설명 텍스트 */
+#page6 .info-block .info-text {
+  font-family: 'KoPubDotum', sans-serif;   /* 본문용 폰트 */
+  font-size: 1.1rem;                        /* 적절한 크기 */
+  color: #222;
+  line-height: 1.8;
+}
+
+/* --------------- 프로젝트 카드 ---------------*/
+.project-card {
+  width: 300px;
+  height: 360px;
+  background: #d9d9d9;                   /* 회색 바탕 */
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  margin: 0 20px;
+  flex-shrink: 0;
+}
+
+/* 🔷 상단 이미지 영역 */
+.project-image {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;              /* 가로 중앙 정렬 */
+  align-items: center;                  /* 세로 중앙 정렬 */
+  background: #d9d9d9;
+}
+
+.project-image img {
+  max-width: 100%;                      /* 이미지가 넘치지 않도록 */
+  max-height: 100%;
+  object-fit: contain;                  /* 비율 유지하면서 꽉 채우기 */
+}
+
+.project-track {
+  display: flex;           /* ➤ 가로로 배치 */
+  gap: 24px;               /* ➤ 카드 사이 간격 */
+  overflow-x: auto;        /* ➤ 가로 스크롤 가능하게 */
+  padding: 20px;
+}
+
+.project-track-wrapper {
+  width: 100%;
+  overflow: hidden; /* 🔥 스크롤바 안 생기게 */
+  position: relative;
+}
+
+/* 🔷 하단 검정 배경 설명 영역 */
+.project-info {
+  background: #222;
+  color: #fff;
+  padding: 16px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;                   /* 텍스트 중앙 정렬 */
+}
+
+
+/* 🔷 프로젝트 제목 */
+.project-info h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* 🔷 소제목 */
+.project-sub {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 8px;
+}
+
+/* 🔷 간단 설명 */
+.project-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #eee;
+}
+
+/* css 애니메이션 */
+.project-track {
+  display: flex;
+  width: fit-content;
+  animation: project-scroll 40s linear infinite;
+}
+
+.project-set {
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+}
+
+@keyframes project-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+/* ----- 지원하기 페이지 ----- */
+/* 전체 섹션 */
+#page7 {
+  padding: 100px 20px;
+  background: #fff;
+}
+
+/* 제목 + 박스를 감싸는 래퍼 */
+.recruit-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 제목: 지원하기 */
+.recruit-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+/* 박스 전체 감싸는 컨테이너 */
+.recruit-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+/* 각각의 박스 */
+.recruit-box {
+  background: #f5f5f5;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 40px 30px;
+  width: 400px;
+  text-align: left;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 제목 */
+.recruit-box h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* 항목 리스트 */
+.recruit-box ul {
+  padding-left: 1.2em;
+}
+
+.recruit-box li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.recruit-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+
+  /* ✅ 추가 */
+  align-items: stretch;
+}
+
+
+
+/* --------------- Learn more 버튼 -------------- */
+/* 🔷 검정 배경의 기본 Learn More 버튼 */
+.learn-more-btn {
+  display: inline-block;                   /* 인라인 + 블록 속성 */
+  padding: 12px 20px;                      /* 안쪽 여백 */
+  background: #222;                        /* 진한 배경색 */
+  color: #fff;                             /* 흰색 글씨 */
+  border-radius: 6px;                      /* 둥근 테두리 */
+  text-decoration: none;                   /* 밑줄 제거 */
+  font-size: 1rem;                         /* 폰트 크기 */
+  transition: background 0.3s ease;        /* 부드러운 색상 전환 */
+}
+
+/* 🔷 버튼에 마우스를 올렸을 때 효과 */
+.learn-more-btn:hover {
+  background: #444;                        /* 좀 더 연한 회색으로 변경 */
+}
+
+/* 🔷 Learn More 버튼 아래 부연 설명 */
+.learn-more-desc {
+  display: block;                          /* 줄바꿈 처리 */
+  font-size: 0.9rem;                       /* 작은 크기 */
+  color: #ccc;                             /* 흐릿한 회색 */
+  margin-top: 4px;                         /* 위와의 여백 */
+}
+
+/* ------ 올라가기 버튼 ----- */
+.fixed-go-up-btn {
+  position: fixed;          /* 화면 기준으로 고정 */
+  bottom: 20px;             /* 아래에서 20px 띄움 */
+  right: 20px;              /* 오른쪽에서 20px 띄움 */
+  padding: 12px 20px;
+  background-color: #000000;  /* 원하는 색상 */
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 1000;           /* 다른 요소보다 위에 */
+  transition: background-color 0.2s;
+}
+
+.fixed-go-up-btn:hover {
+  background-color: #72BF6B;  /* 호버 시 색상 */
+}
+
+
+
+
+
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 1200px) {
+  .text-wrapper {
+    font-size: 80px;
+    line-height: 90px;
+  }
+  
+  .logo {
+    font-size: 120px;
+  }
+  
+  .sle-keyword span {
+    font-size: 30px;
+  }
+  
+  .big-letter {
+    font-size: 60px;
+  }
+  
+  .sle-letter {
+    font-size: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 20px 10px;
+  }
+  
+  #page1 {
+    padding-left: 40px;
+  }
+  
+  .text-wrapper {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  
+  .logo {
+    font-size: 80px;
+  }
+  
+  .sle-keyword {
+    gap: 50px;
+  }
+  
+  .sle-keyword span {
+    font-size: 24px;
+  }
+  
+  .big-letter {
+    font-size: 40px;
+  }
+  
+  .sle-letter {
+    font-size: 150px;
+  }
+  
+  .sle3-title {
+    gap: 20px;
+  }
+}
+
+.info-section {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.info-left {
+  flex: 1 1 0;
+  max-width: 50%;
+  padding: 60px 40px 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-block {
+  margin-bottom: 60px;
+}
+
+.info-block h2 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.info-block .icon {
+  font-size: 1.5rem;
+  margin-left: 8px;
+}
+
+.info-block p {
+  font-family: 'KoPubDotum', sans-serif;
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+
+.info-subtitle {
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.info-list {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 18px;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.learn-more-btn:hover {
+  background-color: #72BF6B;  /* 호버 시 색상 */
+}
+
+.learn-more-desc {
+  display: block;
+  font-size: 0.85rem;
+  color: #ffffff;
+  font-weight: normal;
+}
+
+/* 첫 번째 section을 fixed로 오버레이 */
+.page-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(255,255,255,0.85); /* 반투명 */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: opacity 0.5s;
+  will-change: opacity;
+}
+
+/* 두 번째 section은 원래대로 */
+#page2 {
+  position: relative;
+  z-index: 1;
+}
+
+/* 스크롤 시 첫 번째 section 사라지게 */
+.page-fixed.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.page-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 10;
+  background: rgba(98, 90, 90, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 0.5s, opacity 0.5s;
+  will-change: transform, opacity;
+  pointer-events: none; /* 아래 섹션 클릭 가능 */
+}
+
+/* 이미지 정렬 및 크기 조절 */
+.text-right {
+  display: flex;
+  align-items: center;     /* 세로 중앙 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 (필요 시 left/right로 조정) */
+}
+
+.sle-logo-img {
+  width: 400px;      /* 너비를 고정 크기로 지정 (예: 220px) */
+  height: auto;      /* 비율 유지하면서 자동 조정 */
+  object-fit: contain;
+  margin-top: 20px;  /* 위 여백 조정 */
+  margin-left: 450px; /* 왼쪽 여백 (필요 시) */
+}

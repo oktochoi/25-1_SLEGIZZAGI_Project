@@ -1,0 +1,85 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 바디 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding-top: 70px; /* 헤더 높이만큼 여백 확보 */
+}
+
+/* 고정 헤더 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+
+/* 컨테이너 */
+.container {
+    max-width: 1200px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 로고 */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-text {
+    color: #2c2c2c;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.logo-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* 네비게이션 */
+.nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #666;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav {
+        gap: 20px;
+    }
+}

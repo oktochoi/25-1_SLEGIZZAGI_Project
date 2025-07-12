@@ -5,14 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>소개 페이지</title>
   <link rel="stylesheet" href="../css/about.css" />
+  <link rel="stylesheet" href="../css/header.css">
 </head>
 <body>
-<body>
-  <!-- Hero 섹션 (첫 화면) -->
+
+  <header class="header">
+    <div class="container">
+      <a href="./index.html" class="logo">
+        <span class="logo-text">SLE</span>
+        <img src="../img/logo.png" alt="SLE Cube Logo" class="logo-img">
+      </a>
+      <nav class="nav">
+        <a href="./about.html">About</a>
+        <a href="./project.html">Archive</a>
+        <a href="./recruit.html">Recruiting</a>
+        <a href="./qna.html">Q&A</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero 섹션 -->
   <section class="hero">
     <img src="../img/logo.svg" alt="SLE 로고" class="logo-image" />
     <div class="overlay"></div>
-
     <div class="overlay-text">
       <span class="word"><strong>S</strong>olve</span>
       <span class="word"><strong>L</strong>earn</span>
@@ -21,81 +36,115 @@
     <p class="subtitle">이 시대의 슬기로운 코더를 양성하는 동아리</p>
   </section>
 
-  <!-- 활동 섹션 (스크롤하면 가로 슬라이드) -->
+  <!-- 활동 섹션 -->
   <section class="slide-container">
     <div class="scroll-wrapper">
       <div class="slider-track" id="sliderTrack">
-        <div class="card"><img src="../img/meeting.svg" /><h3>정모</h3><p>매주 화요일 19:00 ~ 20:30 전체 동아리원이 모여 친목 시간을 갖습니다. 슬기짜기의 흐름을 함께 맞추고, 서로의 열정을 확인하는 소중한 시간입니다.</p></div>
-        <div class="card"><img src="../img/study.svg" /><h3>스터디</h3><p>슬기짜기에서는 학년별 필수 스터디, 직군별 필수 스터디를 진행합니다. 그리고 개인이 주도하는 개별 자율 스터디가 운영됩니다.</p></div>
-        <div class="card"><img src="../img/outing.svg" /><h3>아웃팅</h3><p>동아리원들이 함께 학교 밖으로 나가 즐기는 친목 활동입니다. 게임, 식사, 피크닉 등 다양한 방식으로 서로 더 가까워지고 활동에 활기를 불어넣는 시간이에요!</p></div>
-        <div class="card"><img src="../img/project.svg" /><h3>방학 프로젝트</h3><p>3주간 몰입하는, 내가 주도하는 진짜 프로젝트 계절학기 기간동안, 원하는 사람들과 원하는 주제로 팀을 구성해 자유롭게 프로젝트를 진행합니다.</p></div>
-        <div class="card"><img src="../img/endparty.svg" /><h3>슬년회</h3><p>방학 프로젝트의 마지막 주,완성된 프로젝트를 발표하고, 슬기짜기 OB 선배님들과 만나 피드백을 받고 경험을 나누는 소중한 자리예요.</p></div>
+        <div class="card"><img src="../img/meeting.svg" /><h3>정모</h3><p>매주 화요일 19:00 ~ 20:30 전체 동아리원이 모여 친목 시간을 갖습니다.</p></div>
+        <div class="card"><img src="../img/study.svg" /><h3>스터디</h3><p>슬기짜기에서는 학년별 필수 스터디, 직군별 필수 스터디를 진행합니다.</p></div>
+        <div class="card"><img src="../img/outing.svg" /><h3>아웃팅</h3><p>동아리원들이 함께 학교 밖으로 나가 즐기는 친목 활동입니다.</p></div>
+        <div class="card"><img src="../img/project.svg" /><h3>방학 프로젝트</h3><p>3주간 몰입하는, 내가 주도하는 진짜 프로젝트</p></div>
+        <div class="card"><img src="../img/endparty.svg" /><h3>슬년회</h3><p>방학 프로젝트의 마지막 주, 완성된 프로젝트를 발표하고 OB들과 소통합니다.</p></div>
       </div>
     </div>
   </section>
 
-    <section class="gallery-section">
+  <!-- 갤러리 섹션 추가 -->
+  <section class="gallery-section">
     <h2 class="gallery-title">갤러리</h2>
 
-    <div class="gallery-grid">
-        <div class="gallery-card"><div class="placeholder"></div><p>슬기짜기 첫 정모</p></div>
-        <div class="gallery-card"><div class="placeholder"></div><p>슬기짜기 첫 정모</p></div>
-        <div class="gallery-card"><div class="placeholder"></div><p>슬기짜기 첫 정모</p></div>
-        <div class="gallery-card"><div class="placeholder"></div><p>슬기짜기 첫 정모</p></div>
-        <div class="gallery-card"><div class="placeholder"></div><p>슬기짜기 첫 정모</p></div>
-        <div class="gallery-card"><div class="placeholder"></div><p>슬기짜기 첫 정모</p></div>
-        <div class="gallery-card"><div class="placeholder"></div><p>슬기짜기 첫 정모</p></div>
-        <div class="gallery-card"><div class="placeholder"></div><p>슬기짜기 첫 정모</p></div>
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- 자바스크립트로 삽입될 이미지들 -->
     </div>
 
-    <!-- 페이지네이션 -->
-    <div class="pagination">
-        <button>&#9664;</button>
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <button>&#9654;</button>
+    <div class="pagination" id="pagination">
+      <button id="prevPage">&#9664;</button>
+      <span class="page-number active" data-page="1">1</span>
+      <span class="page-number" data-page="2">2</span>
+      <button id="nextPage">&#9654;</button>
     </div>
-    </section>
+  </section>
 
-<script>
-  const track = document.getElementById('sliderTrack');
-  const slideSection = document.querySelector('.slide-container');
+  <!-- JS -->
+  <script>
+    const track = document.getElementById('sliderTrack');
+    const slideSection = document.querySelector('.slide-container');
 
-  window.addEventListener('scroll', () => {
-    const sectionTop = slideSection.offsetTop;
-    const sectionHeight = slideSection.offsetHeight;
-    const scrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const sectionTop = slideSection.offsetTop;
+      const sectionHeight = slideSection.offsetHeight;
+      const scrollY = window.scrollY;
 
-    const scrollInSection = scrollY - sectionTop;
-    const visibleHeight = sectionHeight - window.innerHeight;
+      const visibleHeight = sectionHeight - window.innerHeight;
+      const startScroll = sectionTop + visibleHeight * 0.3333;
+      const endScroll = sectionTop + visibleHeight * 0.6666;
 
-    const startRatio = 0.3333;
-    const endRatio = 0.6666;
+      const maxTranslateX = track.scrollWidth - window.innerWidth;
 
-    const startScroll = sectionTop + visibleHeight * startRatio;
-    const endScroll = sectionTop + visibleHeight * endRatio;
+      if (scrollY < startScroll) {
+        track.style.transform = `translateX(0px)`;
+      } else if (scrollY >= endScroll) {
+        track.style.transform = `translateX(-${maxTranslateX}px)`;
+      } else {
+        const percent = (scrollY - startScroll) / (endScroll - startScroll);
+        track.style.transform = `translateX(-${percent * maxTranslateX}px)`;
+      }
+    });
 
-    const maxTranslateX = track.scrollWidth - window.innerWidth;
+    window.addEventListener('load', () => {
+      const trackWidth = track.scrollWidth;
+      document.querySelector('.slide-container').style.height = trackWidth + 'px';
+    });
 
-    if (scrollY < startScroll) {
-      // 시작 전: 트랙은 0 위치
-      track.style.transform = `translateX(0px)`;
-    } else if (scrollY >= endScroll) {
-      // 종료 후: 트랙은 최종 위치
-      track.style.transform = `translateX(-${maxTranslateX}px)`;
-    } else {
-      // 구간 내: 슬라이드 트랙 이동
-      const percent = (scrollY - startScroll) / (endScroll - startScroll);
-      track.style.transform = `translateX(-${percent * maxTranslateX}px)`;
+    // 갤러리 페이지네이션
+    const imagesPerPage = 8;
+    const totalImages = 16;
+    const galleryGrid = document.getElementById('galleryGrid');
+    const pageNumbers = document.querySelectorAll('.page-number');
+    const prevBtn = document.getElementById('prevPage');
+    const nextBtn = document.getElementById('nextPage');
+
+    function loadGalleryPage(page) {
+      galleryGrid.innerHTML = '';
+      const start = (page - 1) * imagesPerPage + 1;
+      const end = Math.min(start + imagesPerPage - 1, totalImages);
+
+      for (let i = start; i <= end; i++) {
+        const card = document.createElement('div');
+        card.className = 'gallery-card';
+        card.innerHTML = `
+          <img src="../img/gallery/${i}.jpg" alt="슬기짜기 스터디 ${i}" class="placeholder" />
+          <p>슬기짜기 스터디</p>
+        `;
+        galleryGrid.appendChild(card);
+      }
+
+      pageNumbers.forEach(span => span.classList.remove('active'));
+      document.querySelector(`.page-number[data-page="${page}"]`).classList.add('active');
+
+      prevBtn.disabled = (page === 1);
+      nextBtn.disabled = (page === Math.ceil(totalImages / imagesPerPage));
     }
-  });
 
-  window.addEventListener('load', () => {
-    const trackWidth = track.scrollWidth;
-    document.querySelector('.slide-container').style.height = trackWidth + 'px';
-  });
-</script>
+    loadGalleryPage(1);
+
+    pageNumbers.forEach(span => {
+      span.addEventListener('click', () => {
+        const page = parseInt(span.dataset.page);
+        loadGalleryPage(page);
+      });
+    });
+
+    prevBtn.addEventListener('click', () => {
+      const current = parseInt(document.querySelector('.page-number.active').dataset.page);
+      if (current > 1) loadGalleryPage(current - 1);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      const current = parseInt(document.querySelector('.page-number.active').dataset.page);
+      if (current < Math.ceil(totalImages / imagesPerPage)) loadGalleryPage(current + 1);
+    });
+  </script>
 
 </body>
 </html>
