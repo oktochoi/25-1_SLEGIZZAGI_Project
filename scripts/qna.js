@@ -13,4 +13,24 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+});
+
+window.addEventListener('scroll', function() {
+  const extraInfo = document.querySelector('.qna-extra-info');
+  const faqContainer = document.querySelector('.faq-container');
+  const qnaTitle = document.querySelector('.qna-title');
+  if (!extraInfo || !faqContainer || !qnaTitle) return;
+  const scrollY = window.scrollY || window.pageYOffset;
+  const windowHeight = window.innerHeight;
+  const bodyHeight = document.body.offsetHeight;
+  // 하단 200px 이내로 스크롤 시 안내만 보이고 FAQ/타이틀 숨김
+  if (scrollY + windowHeight >= bodyHeight - 200) {
+    extraInfo.classList.remove('hidden');
+    faqContainer.classList.add('hidden');
+    qnaTitle.classList.add('hidden');
+  } else {
+    extraInfo.classList.add('hidden');
+    faqContainer.classList.remove('hidden');
+    qnaTitle.classList.remove('hidden');
+  }
 }); 

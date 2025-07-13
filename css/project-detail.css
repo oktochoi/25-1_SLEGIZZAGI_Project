@@ -1,1 +1,88 @@
- 
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.project-detail-container {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.project-detail-title1,
+.project-detail-title2 {
+    background-color: #3CB03D;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px;
+}
+
+.project-detail-title2 {
+    margin-left: 10px;
+}
+
+.project-detail-teams {
+    margin-top: 20px;
+}
+
+.project-detail-teams-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.project-detail-title {
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.project-detail-image {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-detail-view-more-container {
+    margin: 200px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-detail-view-more-text {
+    font-size: 30px;
+    background-color: #F5F5F5;
+    border: none;
+
+
+}
+
+.project-detail-view-more-home {
+    border: none;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.project-detail-card-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.project-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    min-width: 250px;
+}
